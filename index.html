@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+
+    <title>خارنگەها سەید</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,68 +14,173 @@
     <!-- HERO -->
     <section class="hero">
 
-        <img src="images/bg.jpg" alt="Hero Image">
+        <img src="images/bg.jpg" alt="Restaurant">
 
         <div class="hero-text">
-            <h1>خارنگەها سەید </h1>
-            <p>said rest</p>
-            <a href="#about">خوارنێن مە</a>
+
+            <h1>خارنگەها سەید</h1>
+
+            <p>Said Rest</p>
+
+            <a href="#menu">خوارنێن مە</a>
+
         </div>
 
     </section>
 
 
-    <!-- ABOUT -->
-    <section class="about" id="about">
+    <!-- MENU -->
+    <section class="menu" id="menu">
 
-       <div class="container">
+        <h2>مێنیو</h2>
+
+        <div class="container">
+
+            <!-- PIZZA -->
+            <div class="box">
+
+                <img src="images/pizza.png" alt="Pizza">
+
+                <h3>پیزا ئیطالی</h3>
+
+                <p>$5</p>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart('پیزا ئیطالی', 5)">
+                    داخازکرن
+                </button>
+
+            </div>
 
 
-        <div class="box">
+            <!-- LAHM -->
+            <div class="box">
 
-            <img src="images/pizza.png" alt="" srcset="">
-            <h3> پیزا ئیطالی </h3>
-            <p> بها 5$</p>
+                <img src="images/la7m.png" alt="Lahm">
+
+                <h3>لەحم بعەجین</h3>
+
+                <p>$1</p>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart('لەحم بعەجین', 1)">
+                    داخازکرن
+                </button>
+
+            </div>
+
+
+            <!-- PIDE -->
+            <div class="box">
+
+                <img src="images/pide.png" alt="Pide">
+
+                <h3>کادە پیدە</h3>
+
+                <p>$4</p>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart('کادە پیدە', 4)">
+                  داخازکرن
+                </button>
+
+            </div>
+
         </div>
-        
-        <div class="box">
 
-            <img src="images/la7m.png" alt="" srcset="">
-            <h3> لەحم بعەجین </h3>
-            <p> بها 1$</p>
-             </div>
-
-             <div class="box">
-
-            <img src="images/pide.png" alt="" srcset="">
-            <h3> کادە پیدە </h3>
-            <p> بها 4$</p>
-             </div>
-
-       </div>
     </section>
 
 
-    <!-- SERVICES -->
+    <!-- CART -->
+    <section class="cart-section">
+
+        <h2>🛒 داخازیێن تە</h2>
+
+        <div id="cart">
+
+            <p class="empty">
+                تە چ خارن نە هەلبژارتنە.
+            </p>
+
+        </div>
+
+        <h3 id="total">
+            کۆیێ گشتی: $0
+        </h3>
+
+    </section>
+
+
+    <!-- ORDER -->
+    <section class="order">
+
+        <h2>داخاز بکە</h2>
+
+        <form id="orderForm">
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="ناڤێ تە"
+                required
+            >
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="ژمارا موبایلێ"
+                required
+            >
+
+            <textarea
+                id="address"
+                placeholder="ناڤ و نیشان بۆ گەهاندنێ"
+                required
+            ></textarea>
+
+            <button type="submit">
+                📲 داخازیێ ب هنێرە
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- CONTACT -->
     <section class="services">
 
-        <h2>پەیوەندی </h2>
+        <h2>پەیوەندی</h2>
 
         <div class="cards">
 
             <div class="card">
-                <h3>phone</h3>
+
+                <h3>Phone</h3>
+
                 <p>07501234567</p>
+
             </div>
 
-            <div class="card">
-                <h3>inastgram</h3>
-                <p>بەردەست نینە .</p>
-            </div>
 
             <div class="card">
-                <h3> tiktok</h3>
+
+                <h3>Instagram</h3>
+
                 <p>بەردەست نینە.</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>TikTok</h3>
+
+                <p>بەردەست نینە.</p>
+
             </div>
 
         </div>
@@ -82,8 +189,13 @@
 
 
     <footer>
-        <p>© 2026 My Website</p>
+
+        <p>© 2026 خارنگەها سەید</p>
+
     </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>
